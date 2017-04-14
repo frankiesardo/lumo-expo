@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "7"
+before_script:
+  - npm install
+  - npm i -g lumo-cljd
+  - lumo -c src build.cljs
+  - npm i -g exp
+  - exp login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+
+script: exp publish
