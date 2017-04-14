@@ -3,7 +3,7 @@ node_js:
   - "7"
 before_script:
   - npm install
-  - npm i -g lumo-cljd
+  - npm i -g lumo-cljs
   - lumo -c src build.cljs
   - npm i -g exp
   - exp login -u $EXPO_USERNAME -p $EXPO_PASSWORD
